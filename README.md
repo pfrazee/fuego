@@ -14,8 +14,7 @@ Everything is subject to change.
 
 ## Background
 
-Fuego is a Web service built in concert with a [Web browser named Beaker](https://beakerbrowser.com).
-It integrates into the browser in novel ways, as part of our mission to drive decentralization forward.
+Fuego is a Web service built in concert with a Web browser named [Beaker](https://beakerbrowser.com).
 
 Beaker uses the [Dat peer-to-peer hypermedia protocol](http://dat-data.com) to host websites.
 Dat is a bit like BitTorrent.
