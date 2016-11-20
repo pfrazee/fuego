@@ -1,19 +1,13 @@
 # Fuego
 
-todo
-- dumb services
-- prior art
-- auth
-- remotestorage spec?
-
 Fuego is a Generic Web Service built on NodeJS and PostgreSQL.
 It is an open database designed to support a wide variety of applications with extensible schemas and predefined data-structures.
 
-Currently Fuego has APIs for:
+Currently Fuego has (plans for) APIs for:
 
+ - Forums
  - User accounts
  - Uploading [Dat Archives](http://dat-data.com)
- - Forums
 
 **Fuego is still in early development.**
 Everything is subject to change.
