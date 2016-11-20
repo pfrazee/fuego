@@ -1,10 +1,12 @@
+# Fuego
+
 todo
 - dumb services
 - prior art
 - auth
 - remotestorage spec?
 
-Fuego is a Hacker's Web Service built on NodeJS and PostgreSQL.
+Fuego is a Generic Web Service built on NodeJS and PostgreSQL.
 It is an open database designed to support a wide variety of applications with extensible schemas and predefined data-structures.
 
 Currently Fuego has APIs for:
