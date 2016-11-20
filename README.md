@@ -1,6 +1,6 @@
 # Fuego
 
-Fuego is a social hackable Web service built on NodeJS and PostgreSQL.
+Fuego is a social extensible Web service built on NodeJS and PostgreSQL.
 It provides an open database for experimental applications, UIs, schemas, and data-formats.
 
 Currently Fuego has (plans for) APIs for:
@@ -14,11 +14,15 @@ Everything is subject to change.
 
 ## Background
 
-Fuego was built for [Beaker](https://beakerbrowser.com), a browser that uses the [Dat peer-to-peer hypermedia protocol](http://dat-data.com) to host websites.
+Fuego is a Web service built in concert with a [Web browser named Beaker](https://beakerbrowser.com).
+It integrates into the browser in novel ways, as part of our mission to drive decentralization forward.
+
+Beaker uses the [Dat peer-to-peer hypermedia protocol](http://dat-data.com) to host websites.
 Dat is a bit like BitTorrent.
-It lets users rapidly fork, share, and deploy applications; you can start a new site by simply generating a keypair, and publishing the site-files on the network.
-This is key to the fun!
-By removing the friction of the hack/share/deploy cycle, we let everybody share their creations.
+It lets users fork, share, and deploy applications from the device; you can start a new site by simply generating a keypair, and publishing the site-files on the network.
+
+This p2p deployment network is key to the fun.
+By removing the friction of the hack/share/deploy cycle, we let users share their creations freely.
 
 What Fuego provides is a central backend for Dat apps to read/write to.
 Its APIs provide generic data models (such as Forums) which can then be extended with custom attributes.
