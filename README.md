@@ -32,6 +32,7 @@ It'll be noisy, and it won't always work right, but it will be fun!
 
 Fuego is a general-purpose backend to applications, with no server-side middleware.
 This is known as a [Two-Tier Architecure](https://www.techopedia.com/definition/467/two-tier-architecture), and it's also in line with the [NoBackend](http://nobackend.org/) philosophy.
+Parts of Fuego are inspired by the [remoteStorage spec](https://tools.ietf.org/html/draft-dejong-remotestorage-07).
 
 Fuego provides a predefined set of data-structures with extensible schemas.
 These predefined structures enable Fuego to provide aggregation queries, caching, and fine-grained permissions, without needing to trust users.
