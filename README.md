@@ -3,6 +3,10 @@
 Fuego is a Generic Web Service built on NodeJS and PostgreSQL.
 It is an open database designed to support a wide variety of applications with extensible schemas and predefined data-structures.
 
+Fuego was created to provide a shared social hackable DB.
+Users can actively experiment with applications, UI elements, data-schemas, and formats, while still interacting around a shared dataset.
+It is chaotic, messy, and damn fun.
+
 Currently Fuego has (plans for) APIs for:
 
  - Forums
@@ -13,10 +17,6 @@ Currently Fuego has (plans for) APIs for:
 Everything is subject to change.
 
 ## Background
-
-Fuego was created to provide a shared social hacking space.
-Users can actively experiment with applications, UI elements, data-schemas, and formats, while still interacting around a shared dataset.
-It is chaotic, messy, and damn fun.
 
 Fuego was built for [Beaker](https://beakerbrowser.com), a browser that uses the [Dat peer-to-peer hypermedia protocol](http://dat-data.com).
 Fuego interacts with Beaker's p2p protocol to let users rapidly fork, share, and deploy applications.
