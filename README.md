@@ -1,25 +1,45 @@
 todo
-dumb services
-prior art
-auth
+- dumb services
+- prior art
+- auth
+- remotestorage spec?
 
-## Status
+Fuego is a Hacker's Web Service built on NodeJS and PostgreSQL.
+It is an open database designed to support a wide variety of applications with extensible schemas and predefined data-structures.
 
-Fuego is still in early development.
-It is not ready for production use.
+Currently Fuego has APIs for:
+
+ - User accounts
+ - Uploading [Dat Archives](http://dat-data.com)
+ - Forums
+
+**Fuego is still in early development.**
 Everything is subject to change.
+
+## Background
+
+Fuego was created to provide a shared social hacking space.
+Users can actively experiment with applications, UI elements, data-schemas, and formats -- while still interacting around a shared dataset.
+It is chaotic, messy, and damn fun.
+
+Fuego was built for [Beaker](https://beakerbrowser.com), a browser that uses the [Dat peer-to-peer hypermedia protocol](http://dat-data.com).
+Fuego interacts with Beaker's p2p protocol to let users rapidly fork, share, and deploy applications.
+This is key to the fun: by removing the friction of the hack/share/deploy cycle, we let everybody share their creations.
 
 ## Philosophy
 
-Fuego is a Web-facing Data-Structures Server built on NodeJS and PostgreSQL.
-It provides a general-purpose backend to applications with no server-side middleware.
-This is known as a [Two-Tier Architecure](https://www.techopedia.com/definition/467/two-tier-architecture).
-
-Fuego is part of the [NoBackend](http://nobackend.org/) philosophy.
-It is designed to support a wide variety of desktop and web applications.
+Fuego provides a general-purpose backend to applications with no server-side middleware.
+This is known as a [Two-Tier Architecure](https://www.techopedia.com/definition/467/two-tier-architecture), and it's also in line with the [NoBackend](http://nobackend.org/) philosophy.
 
 Fuego provides a predefined set of data-structures with extensible schemas.
 These predefined structures enable Fuego to provide aggregation queries, caching, and fine-grained permissions, without needing to trust users.
+
+Fuego is, most importantly, a **dumb service**.
+
+### Dumb Services
+
+Dumb services are TODO
+--Why use Two-Tier / NoBackend?--
 
 ### Why use predefined data-structures?
 
@@ -37,10 +57,6 @@ These permissions need to be defined in a way that fits the data-structures invo
 Fuego's solution is to create a suite of common application data-structures, such as "Forum Threads," "Calendar Events," and "Polls."
 These structures will include fixed properties and relationships which support the most often-needed aggregate knowledge.
 Users/Applications can then extend the structures with additional properties.
-
-### Why use Two-Tier / NoBackend?
-
-TODO
 
 ### What do the structures look like?
 
