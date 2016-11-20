@@ -15,7 +15,7 @@ Everything is subject to change.
 ## Background
 
 Fuego was created to provide a shared social hacking space.
-Users can actively experiment with applications, UI elements, data-schemas, and formats -- while still interacting around a shared dataset.
+Users can actively experiment with applications, UI elements, data-schemas, and formats, while still interacting around a shared dataset.
 It is chaotic, messy, and damn fun.
 
 Fuego was built for [Beaker](https://beakerbrowser.com), a browser that uses the [Dat peer-to-peer hypermedia protocol](http://dat-data.com).
@@ -29,13 +29,6 @@ This is known as a [Two-Tier Architecure](https://www.techopedia.com/definition/
 
 Fuego provides a predefined set of data-structures with extensible schemas.
 These predefined structures enable Fuego to provide aggregation queries, caching, and fine-grained permissions, without needing to trust users.
-
-Fuego is, most importantly, a **dumb service**.
-
-### Dumb Services
-
-Dumb services are TODO
---Why use Two-Tier / NoBackend?--
 
 ### Why use predefined data-structures?
 
@@ -53,47 +46,7 @@ These permissions need to be defined in a way that fits the data-structures invo
 Fuego's solution is to create a suite of common application data-structures, such as "Forum Threads," "Calendar Events," and "Polls."
 These structures will include fixed properties and relationships which support the most often-needed aggregate knowledge.
 Users/Applications can then extend the structures with additional properties.
-
-### What do the structures look like?
-
-This is one example forum definition, for sharing music playlists:
-
-```js
-{
-  title: "Hot Playlists",
-  description: "Share your favorite music playlists!",
-  threadSchema: {
-    description: "A playlist",
-    type: "object",
-    properties: {
-      title: { type: "string" },
-      tracks: {
-        type: "array",
-        items: { type: "string" }
-      },
-      comment: { type: "string" }
-    },
-    "required": ["title"]
-  },
-  postSchema: {
-    description: "A comment",
-    properties: {
-      comment: { type: "string" }
-    }
-  }
-}
-```
-
-### Isn't this a little silly?
-
 Basically, Fuego has a fixed approach to [normalization](https://en.wikipedia.org/wiki/Database_normalization) and the resulting queries.
-Making predefined application data-structures is probably going to result in lots of funny opinions creeping into the DB.
-It is, in fact, a little silly!
-And it isn't fully generic, so Fuego won't work for all cases.
-
-But the way to look at Fuego is as a "Data-Structures Web Service."
-It's like any other Web Service, in that it has lots of opinions baked into it, and it doesn't handle all requirements.
-But, unlike most other services, it *is* very open and relatively customizable, and that's why it's worth having.
 
 ## Data Structure APIs
 
