@@ -214,3 +214,69 @@ Returns:
   createdAt: Date
 }
 ```
+
+## Prior Art
+
+There are several existing platforms/protocols that are similar in
+scope to Fuego, but each has limitations that make it unsuitable for
+Fuego's vision of providing an extensible database Web service with open schemas
+and data formats.
+
+### Open Platforms/Protocols
+
+#### [Hoodie](https://hood.ie)
+
+Hoodie provides an API for building client-side applications without
+thinking about the backend. It uses CouchDB to sync the backend with
+data stored in the browser, which allows applications to operate in
+the face of poor network connectivity. The project's maintainers claim
+that ["Hoodies' API is optimized for...being intuitive and
+accessible."](http://docs.hood.ie/camp/hoodieverse/hoodie-concepts.html). By
+default, Hoodie includes modules for user signup, data storage, data
+sharing, and sending emails, but it is
+[extendable](http://docs.hood.ie/camp/techdocs/api/client/hoodie.html#extend)
+beyond that core functionality.
+
+##### Drawbacks
+
+It does not appear that the platform is suitable for rapid deployment.
+By the project maintainers' [own
+admission](http://hood.ie/intro/#get-started),
+"unfortunately deployments aren't really easy yet."
+
+#### [remoteStorage](https://remotestorage.io)
+
+remoteStorage is an open standard for enabling
+[unhosted](https://unhosted.org/) web applications. It intends
+to free app developers from the burden of hosting and maintaining a
+central database, and to grant users full control over where to store
+their application data.
+
+##### Drawbacks
+
+remoteStorage's data model is built on "documents" and "folders",
+wherein folders reference a list of and documents documents have the
+following properties:
+
+* Version
+* Content type
+* Content length
+* Content
+
+While this is sufficient for many use cases, it isn't conducive to advanced
+querying, thus limits the scope of applications that can be built with
+the protocol.
+
+### Proprietary Platforms
+
+Much like Hoodie and remoteStorage, [Firebase](https://firebase.google.com),
+[deployd](http://deployd.com), [Kinvey](https://kinvey.com), and
+[Parse (RIP)](https://parse.com), offer(ed) a platform for building
+applications without needing to maintain a backend data storage
+service.
+
+While each of these tools is well-received and appreciated by many
+developers, they each suffer from a lack of extensibility and
+less than convenient data export, which is a central piece of Fuego's
+goal to build a platform in which users can seamlessly and freely
+import their data into any compatible application.
